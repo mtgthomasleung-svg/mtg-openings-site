@@ -21,10 +21,12 @@ export default function JobDetails() {
       {/* Header */}
       <header className="space-y-6 pb-8 border-b border-slate-200">
         <div className="flex flex-wrap items-center gap-y-3 gap-x-2 text-sm font-medium text-slate-500 uppercase tracking-wider">
-          <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg text-slate-600">
-            <Briefcase size={16} className="shrink-0" />
-            <span className="whitespace-nowrap">{job.type}</span>
-          </div>
+          {job.types.map((type) => (
+            <div key={type} className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg text-slate-600">
+              <Briefcase size={16} className="shrink-0" />
+              <span className="whitespace-nowrap">{type}</span>
+            </div>
+          ))}
           <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg text-slate-600">
             <MapPin size={16} className="shrink-0" />
             <span className="whitespace-nowrap">Hong Kong</span>

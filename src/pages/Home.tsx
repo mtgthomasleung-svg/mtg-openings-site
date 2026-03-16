@@ -3,6 +3,11 @@ import { companyInfo } from '../data';
 import { motion } from 'motion/react';
 
 export default function Home() {
+  const overviewParagraphs = companyInfo.overview
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -12,15 +17,25 @@ export default function Home() {
     >
       {/* Hero Section */}
       <section className="text-center space-y-6 py-12">
+        <div className="space-y-4">
+          <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900">
+            Careers at Mobigator
+          </h1>
+          <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            Join an amazingly talented team to design and develop advanced business applications.
+          </p>
+        </div>
         <div className="inline-flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100 mb-6">
           <img src={companyInfo.logo} alt={companyInfo.name} className="h-16 md:h-20 object-contain" referrerPolicy="no-referrer" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
-          Careers at Mobigator
-        </h1>
-        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
-          Join an amazingly talented team to design and develop advanced business applications.
-        </p>
+        <div className="space-y-1">
+          <p className="text-lg md:text-xl font-semibold tracking-wide text-slate-700">
+            Healthcare IT Solutions
+          </p>
+          <p className="text-base md:text-lg text-slate-500">
+            Where Programmers Can Save Lives
+          </p>
+        </div>
       </section>
 
       {/* Overview */}
@@ -33,9 +48,11 @@ export default function Home() {
             <Building2 size={24} />
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Overview</h2>
           </div>
-          <p className="text-slate-600 leading-relaxed text-lg">
-            {companyInfo.overview}
-          </p>
+          <div className="space-y-5 text-slate-600 leading-relaxed">
+            {overviewParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </section>
 

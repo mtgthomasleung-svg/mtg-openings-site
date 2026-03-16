@@ -16,12 +16,12 @@ from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LOGO = "https://www.mobigator.com/pub/images/header/logo.png"
-DEFAULT_OUTPUT = ROOT / "ai-intern-event.pdf"
-DEFAULT_URL = "https://mtgthomasleung-svg.github.io/mtg-openings-site/#/jobs/ai-intern"
-DEFAULT_TITLE = "AI Intern"
+DEFAULT_OUTPUT = ROOT / "ai-specialist-event.pdf"
+DEFAULT_URL = "https://mtgthomasleung-svg.github.io/mtg-openings-site/#/jobs/ai-specialist"
+DEFAULT_TITLE = "AI Specialist"
 DEFAULT_SUMMARY = (
-    "Explore the latest AI tools and technologies while contributing to real business applications."
-    "\n\nStudents in all related fields are welcome to apply."
+    "Explore the latest AI tools and technologies, and evaluate how they can be applied to real business use cases."
+    "\n\nSaving lifes with AI."
 )
 
 
@@ -82,7 +82,7 @@ def pil_to_reader(image: Image.Image) -> ImageReader:
 
 
 def fit_title_font(pdf: canvas.Canvas, title: str, max_width: float) -> int:
-    for size in range(30, 17, -1):
+    for size in range(36, 17, -1):
         if pdf.stringWidth(title, "Helvetica-Bold", size) <= max_width:
             return size
     return 17
@@ -160,7 +160,7 @@ def generate_pdf(content: PosterContent) -> Path:
 
     pdf.setFillColorRGB(0.07, 0.10, 0.15)
     pdf.setFont("Helvetica-Bold", title_font)
-    pdf.drawCentredString(page_width / 2, after_logo_y - 36, content.title)
+    pdf.drawCentredString(page_width / 2, after_logo_y - 44, content.title)
 
     summary_font = 18
     summary_line_leading = 18
@@ -168,7 +168,7 @@ def generate_pdf(content: PosterContent) -> Path:
     summary_width = page_width - (2 * margin_x)
 
     paragraphs = content.summary.split("\n\n")
-    y = after_logo_y - 70
+    y = after_logo_y - 78
     pdf.setFont("Helvetica", summary_font)
     pdf.setFillColorRGB(0.27, 0.32, 0.38)
 

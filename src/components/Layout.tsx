@@ -119,9 +119,9 @@ export default function Layout() {
               11/F, Suite B, KPP, 55 King Yip Street<br />
               Kwun Tong, Hong Kong
             </p>
-            <p>Tel (852) 2524.9000 &nbsp;|&nbsp; Fax (852) 2524.9050</p>
+            <p>Tel (852) 5668 3298 &nbsp;|&nbsp; Fax (852) 2524 9050</p>
             <p>
-              <a href="mailto:info@mobigator.com" className="hover:text-blue-600 transition-colors">info@mobigator.com</a>
+              <a href="mailto:jobs@mobigator.com" className="hover:text-blue-600 transition-colors">jobs@mobigator.com</a>
               {' '}&bull;{' '}
               <a href="https://www.mobigator.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">www.mobigator.com</a>
             </p>
