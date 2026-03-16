@@ -80,8 +80,8 @@ export default function Layout() {
                           : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                       }`}
                     >
-                      <div className="flex items-center gap-3 truncate">
-                        <Briefcase size={18} className={isActive ? 'text-blue-500' : 'text-slate-400 group-hover:text-slate-600'} />
+                      <div className="flex min-w-0 items-center gap-3">
+                        <Briefcase size={18} className={`shrink-0 ${isActive ? 'text-blue-500' : 'text-slate-400 group-hover:text-slate-600'}`} />
                         <span className="truncate">{job.title}</span>
                       </div>
                       <ChevronRight size={16} className={`shrink-0 ${isActive ? 'text-blue-500' : 'text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity'}`} />
