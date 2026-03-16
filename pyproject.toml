@@ -1,0 +1,13 @@
+[project]
+name = "mtg-openings-site-event-pdf"
+version = "0.1.0"
+description = "Generate A4 event PDFs for MTG job openings"
+requires-python = ">=3.11"
+dependencies = [
+  "reportlab>=4.2.5",
+  "qrcode[pil]>=8.2",
+]
+
+[tool.uv]
+package = false
+
