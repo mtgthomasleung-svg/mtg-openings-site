@@ -41,14 +41,11 @@ export const jobs = [
     title: "AI Intern",
     type: "Internship",
     responsibilities: [
-      "Develop AI agents and AI-driven solutions leveraging structured and unstructured data to solve specific real-life business problems.",
       "Explore the latest AI tools and technologies, and evaluate how they can be applied to real business use cases.",
-      "Deploy, manage, and optimize open-source and local LLMs for production using inference engines (e.g., vLLM, SGLang, llama.cpp).",
-      "Implement APIs or pipelines to automate AI-driven workflows and agentic tasks.",
-      "Design and optimize SQL queries for efficient data retrieval.",
-      "Work with stakeholders to define business logic and translate AI capabilities into functional production systems.",
-      "Conduct advanced prompt engineering, performance validation, and continuous evaluation of AI applications.",
-      "Ensure application safety and reliability by implementing guardrails and effective agentic tool use."
+      "Support the team in prototyping AI-driven solutions that address real-life business problems using structured and unstructured data.",
+      "Gain hands-on experience with open-source and local LLMs, prompt engineering, and AI orchestration frameworks.",
+      "Collaborate with experienced engineers and stakeholders to understand business needs and turn ideas into practical AI applications.",
+      "Assess AI application quality, safety, and reliability through testing, evaluation, and guardrails."
     ],
     requirements: [
       "Current Bachelor's or Master's students in Computer Science, AI/ML (Machine Learning), Data Science, or a related field.",
